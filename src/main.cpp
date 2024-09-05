@@ -1,7 +1,7 @@
 #include <iostream>
 #include <math.h>
-#include <glad/glad.h>
-#include <GLFW/glfw3.h>
+#include <C:/Users/efsip/Desktop/Coding/OpenGL/Learning_OpenGL/include/glad/glad.h>
+#include <C:/Users/efsip/Desktop/Coding/OpenGL/Learning_OpenGL/include/GLFW/glfw3.h>
 
 using namespace std; 
 

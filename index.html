@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STEMCELL Organization</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; line-height: 1.6; background: #f4f4f9; color: #333; }
+    header { background: #004aad; color: white; padding: 20px 40px; text-align: center; }
+    header h1 { font-size: 2.5rem; }
+    nav { margin-top: 15px; }
+    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+    nav a:hover { text-decoration: underline; }
+
+    section { padding: 60px 20px; max-width: 1100px; margin: auto; }
+    .hero { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1581090700227-4c4f8f83d2b2'); background-size: cover; color: white; text-align: center; padding: 120px 20px; border-radius: 10px; }
+    .hero h2 { font-size: 3rem; margin-bottom: 20px; }
+    .hero p { font-size: 1.2rem; max-width: 700px; margin: auto; }
+
+    .about, .projects, .team, .contact { margin-top: 50px; }
+    h2 { text-align: center; margin-bottom: 30px; font-size: 2rem; color: #004aad; }
+
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+    .card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease; }
+    .card:hover { transform: translateY(-5px); }
+
+    form { display: flex; flex-direction: column; max-width: 500px; margin: auto; }
+    form input, form textarea { padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
+    form button { background: #004aad; color: white; padding: 12px; border: none; border-radius: 5px; cursor: pointer; font-size: 1rem; }
+    form button:hover { background: #00327a; }
+
+    footer { text-align: center; padding: 20px; margin-top: 40px; background: #004aad; color: white; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>STEMCELL Organization</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#team">Team</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Empowering Youth in Science & Technology</h2>
+    <p>STEMCELL supports young innovators, project creators, and Olympiad students in İzmir by fostering creativity, collaboration, and real-world problem-solving skills.</p>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>We are a non-profit dedicated to helping students develop their potential in Science, Technology, Engineering, and Mathematics. Our mission is to provide resources, mentorship, and opportunities for young creators to thrive.</p>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>Our Projects</h2>
+    <div class="cards">
+      <div class="card"><h3>Innovation Labs</h3><p>Hands-on workshops where students create real-world tech solutions.</p></div>
+      <div class="card"><h3>STEM Olympiads</h3><p>Guidance and training for national and international science competitions.</p></div>
+      <div class="card"><h3>Community Outreach</h3><p>Engaging events to spread STEM awareness in schools and local communities.</p></div>
+    </div>
+  </section>
+
+  <section id="team" class="team">
+    <h2>Our Team</h2>
+    <div class="cards">
+      <div class="card"><h3>Hikmet Efe Canikli</h3><p>Founder & Developer</p></div>
+      <div class="card"><h3>Advisors</h3><p>Experienced mentors in science, engineering, and education.</p></div>
+      <div class="card"><h3>Volunteers</h3><p>Passionate students and alumni supporting the mission.</p></div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p id="formMessage" style="text-align:center; margin-top:10px; color:green;"></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 STEMCELL Organization | Empowering Future Innovators</p>
+  </footer>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('formMessage').innerText = "Thank you! Your message has been sent.";
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
